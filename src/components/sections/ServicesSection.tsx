@@ -23,7 +23,7 @@ export default function ServicesSection() {
             <div className="max-w-[1200px] mx-auto px-4">
                 <div className="flex items-center justify-center mb-8 gap-4">
                     <div className="w-[100px] h-px bg-gray-300"></div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900 whitespace-nowrap">
+                    <h3 className="text-4xl md:text-5xl font-bold text-gray-900 whitespace-nowrap">
                         我們的使命
                     </h3>
                     <div className="w-[100px] h-px bg-gray-300"></div>
@@ -39,7 +39,7 @@ export default function ServicesSection() {
                 <div className="mb-16">
                     <div className="flex items-center justify-center mb-8 gap-4">
                         <div className="w-[100px] h-px bg-gray-300"></div>
-                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 whitespace-nowrap">
+                        <h3 className="text-4xl md:text-5xl font-bold text-gray-900 whitespace-nowrap">
                             核心價值觀
                         </h3>
                         <div className="w-[100px] h-px bg-gray-300"></div>

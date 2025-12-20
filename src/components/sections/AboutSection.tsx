@@ -1,10 +1,10 @@
 export default function AboutSection() {
     return (
-        <section id="about" className="w-full bg-white">
+        <section id="about" className="w-full bg-white py-12 md:py-10">
             <div className="max-w-[1200px] mx-auto px-4">
-                <div className="flex flex-col md:flex-row min-h-[600px] items-center gap-10">
+                <div className="flex flex-col md:flex-row min-h-[600px] items-center gap-8 md:gap-10">
                     {/* 左侧图片区域 */}
-                    <div className="w-full md:w-1/2 relative h-[300px]">
+                    <div className="w-full md:w-1/2 relative h-[300px] mt-0 md:mt-0">
                         <div
                             className="absolute inset-0 bg-cover bg-center bg-no-repeat rounded-lg"
                             style={{
@@ -15,7 +15,7 @@ export default function AboutSection() {
 
                     {/* 右侧文字内容区域 */}
                     <div className="w-full md:w-1/2 flex items-center bg-white">
-                        <div className="w-full px-4 md:px-8 lg:px-12 py-8 md:py-12">
+                        <div className="w-full px-0 md:px-8 lg:px-12 py-6 md:py-12">
                             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
                                 關於旭越
                             </h2>

@@ -40,18 +40,18 @@ export default function ProjectsSection() {
         </div>
         
         {/* 项目列表 */}
-        <div className="space-y-16">
+        <div className="space-y-12 md:space-y-16">
           {projects.map((project, index) => (
             <div
               key={index}
               className={`flex flex-col ${
                 index % 2 === 0 ? "md:flex flex-row" : "md:flex-row-reverse"
-              } gap-8 items-center`}
+              } gap-6 md:gap-8`}
             >
               {/* 图片区域 */}
               <div className="w-full md:w-1/2">
                 <div
-                  className="w-full h-[300px] bg-cover bg-center bg-no-repeat rounded-lg"
+                  className="w-full h-[250px] md:h-[300px] bg-cover bg-center bg-no-repeat rounded-lg"
                   style={{
                     backgroundImage: `url('${project.image}')`,
                   }}
@@ -59,15 +59,15 @@ export default function ProjectsSection() {
               </div>
 
               {/* 内容区域 */}
-              <div className="w-full md:w-1/2">
-                <h3 className="text-3xl md:text-4xl font-bold mb-4 text-amber-800">
+              <div className="w-full md:w-1/2 flex flex-col justify-center">
+                <h3 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4 text-amber-800">
                   {project.title}
                 </h3>
                 <p className="text-gray-700 leading-relaxed text-base md:text-lg mb-4">
                   {project.description}
                 </p>
                 {project.projects && (
-                  <div className="mt-6">
+                  <div className="mt-4 md:mt-6">
                     <p className="text-sm text-gray-500 mb-2">項目案例：</p>
                     <div className="flex flex-wrap gap-2">
                       {project.projects.map((item, itemIndex) => (

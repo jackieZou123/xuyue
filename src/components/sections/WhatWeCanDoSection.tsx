@@ -38,11 +38,11 @@ export default function WhatWeCanDoSection() {
         {/* 标题 */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-4 gap-4">
-            <div className="w-[100px] h-px bg-gray-300"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 whitespace-nowrap">
+            <div className="hidden md:block w-[100px] h-px bg-gray-300"></div>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
               我們能為您的家族做什麼
             </h2>
-            <div className="w-[100px] h-px bg-gray-300"></div>
+            <div className="hidden md:block w-[100px] h-px bg-gray-300"></div>
           </div>
           <p className="text-lg md:text-xl text-gray-600 mt-4">解決方案</p>
         </div>
@@ -68,7 +68,7 @@ export default function WhatWeCanDoSection() {
               </p>
 
               {/* 描述 - 使用 grow 填充空间 */}
-              <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-4 grow">
+              <p className="text-gray-700 text-sm md:text-base leading-relaxed mb-4 grow wrap-break-word">
                 {service.description}
               </p>
 

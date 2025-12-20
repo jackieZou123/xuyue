@@ -74,12 +74,40 @@ export default function TeamSection() {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
 
+  // 渲染详细信息的辅助函数
+  const renderDetails = (member: typeof teamMembers[0]) => {
+    const sections = [];
+    if (member.coreAreas) sections.push({ title: '核心領域', items: member.coreAreas });
+    if (member.currentPositions) sections.push({ title: '現任職務', items: member.currentPositions });
+    if (member.professionalBackground) sections.push({ title: '專業背景', items: member.professionalBackground });
+    if (member.achievements) sections.push({ title: '行業成就', items: member.achievements });
+    if (member.advantages) sections.push({ title: '專業優勢', items: member.advantages });
+
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        {sections.map((section, index) => (
+          <div key={index}>
+            <h4 className="font-semibold text-gray-900 mb-2 md:mb-3 text-sm md:text-base">{section.title}：</h4>
+            <ul className="space-y-1.5 md:space-y-2">
+              {section.items.map((item, i) => (
+                <li key={i} className="text-gray-700 text-xs md:text-sm flex items-start leading-relaxed">
+                  <span className="text-amber-800 mr-2 shrink-0">●</span>
+                  <span className="flex-1">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   return (
-    <section id="team" className="w-full py-20 bg-gray-50">
+    <section id="team" className="w-full py-12 md:py-20 bg-gray-50">
       <div className="max-w-[1200px] mx-auto px-4">
         {/* 标题 */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center mb-8 gap-4">
+        <div className="text-center mb-8 md:mb-12">
+          <div className="flex items-center justify-center mb-6 md:mb-8 gap-4">
             <div className="w-[100px] h-px bg-gray-300"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 whitespace-nowrap">
               旭越核心團隊
@@ -89,14 +117,14 @@ export default function TeamSection() {
         </div>
 
         {/* 介绍段落 */}
-        <div className="text-center mb-16 max-w-4xl mx-auto">
+        <div className="text-center mb-10 md:mb-16 max-w-4xl mx-auto">
           <p className="text-gray-700 leading-relaxed text-base md:text-lg">
             我們的專業團隊來自於國內外知名院校，曾任職於包括美世集團、上海證券、諾亞財富、安聯集團、博時資本、華寶證券、國泰基金等國內外大型金融機構，具備豐富的基金研究投資經驗，擁有跨地域的視野與眼光。
           </p>
         </div>
 
         {/* 团队成员卡片 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8">
           {teamMembers.map((member, index) => (
             <div
               key={index}
@@ -104,11 +132,11 @@ export default function TeamSection() {
             >
               {/* 卡片主体 - 固定高度 */}
               <div
-                className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow cursor-pointer flex flex-col h-full"
+                className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow md:cursor-pointer flex flex-col h-full"
                 onClick={() => toggleExpand(index)}
               >
                 {/* 头像区域 - 固定高度 */}
-                <div className="w-full h-[300px] relative bg-gray-200 shrink-0">
+                <div className="w-full h-[250px] md:h-[300px] relative bg-gray-200 shrink-0">
                   <div
                     className="w-full h-full bg-cover bg-center bg-no-repeat"
                     style={{
@@ -118,7 +146,7 @@ export default function TeamSection() {
                 </div>
 
                 {/* 基本信息 - 固定最小高度 */}
-                <div className="p-6 grow flex flex-col justify-between min-h-[180px]">
+                <div className="p-4 md:p-6 grow flex flex-col justify-between min-h-[140px] md:min-h-[180px]">
                   <div>
                     <h3 className="text-2xl font-bold mb-2 text-gray-900">
                       {member.name}
@@ -128,8 +156,8 @@ export default function TeamSection() {
                     </p>
                   </div>
 
-                  {/* 展开指示 */}
-                  <div className="flex items-center justify-between text-amber-800 mt-auto">
+                  {/* 展开指示 - 仅桌面端显示 */}
+                  <div className="hidden md:flex items-center justify-between text-amber-800 mt-auto">
                     <span className="text-sm font-medium">
                       {expandedIndex === index ? '收起' : '查看詳情'}
                     </span>
@@ -151,42 +179,22 @@ export default function TeamSection() {
                   </div>
                 </div>
               </div>
+
+              {/* 移动端：详细信息直接显示在卡片下方 */}
+              <div className="md:hidden mt-3 bg-white rounded-lg shadow-lg border border-gray-200 overflow-visible">
+                <div className="px-4 py-4">
+                  {renderDetails(member)}
+                </div>
+              </div>
             </div>
           ))}
         </div>
 
-        {/* 详细信息 - 全宽展开区域 */}
+        {/* 桌面端：详细信息 - 全宽展开区域 */}
         {expandedIndex !== null && (
-          <div className="mt-8 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
+          <div className="hidden md:block mt-8 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
             <div className="px-8 py-6">
-              {(() => {
-                const member = teamMembers[expandedIndex];
-                // 收集所有需要显示的部分
-                const sections = [];
-                if (member.coreAreas) sections.push({ title: '核心領域', items: member.coreAreas });
-                if (member.currentPositions) sections.push({ title: '現任職務', items: member.currentPositions });
-                if (member.professionalBackground) sections.push({ title: '專業背景', items: member.professionalBackground });
-                if (member.achievements) sections.push({ title: '行業成就', items: member.achievements });
-                if (member.advantages) sections.push({ title: '專業優勢', items: member.advantages });
-
-                return (
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {sections.map((section, index) => (
-                      <div key={index}>
-                        <h4 className="font-semibold text-gray-900 mb-3">{section.title}：</h4>
-                        <ul className="space-y-2">
-                          {section.items.map((item, i) => (
-                            <li key={i} className="text-gray-700 text-sm flex items-start">
-                              <span className="text-amber-800 mr-2 shrink-0">●</span>
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                );
-              })()}
+              {renderDetails(teamMembers[expandedIndex])}
             </div>
           </div>
         )}
