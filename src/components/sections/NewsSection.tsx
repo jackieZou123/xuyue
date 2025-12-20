@@ -1,0 +1,76 @@
+export default function NewsSection() {
+  const newsItems = [
+    {
+      title: "旭越家族辦公室正式啟航",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80",
+      link: "#",
+      source: "站内报道",
+    },
+    {
+      title: "借鉴美国税务，探讨中国的遗赠税",
+      image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80",
+      link: "#",
+      source: "媒体报道",
+    },
+    {
+      title: '多地"争抢"家族办公室',
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
+      link: "#",
+      source: "公众号",
+    },
+  ];
+
+  return (
+    <section id="news" className="w-full py-20 bg-gray-50">
+      <div className="max-w-[1200px] mx-auto px-4">
+        {/* 标题 */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center mb-8 gap-4">
+            <div className="w-[100px] h-px bg-gray-300"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 whitespace-nowrap">
+              旭越新聞
+            </h2>
+            <div className="w-[100px] h-px bg-gray-300"></div>
+          </div>
+          <p className="text-sm text-gray-500 mt-2">
+            外接新聞報道 + 站內報道，整理事件進行發布
+          </p>
+        </div>
+        
+        {/* 新闻卡片网格 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {newsItems.map((news, index) => (
+            <a
+              key={index}
+              href={news.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block"
+            >
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                {/* 图片区域 */}
+                <div className="relative w-full h-[250px] overflow-hidden">
+                  <div
+                    className="w-full h-full bg-cover bg-center bg-no-repeat group-hover:scale-105 transition-transform duration-300"
+                    style={{
+                      backgroundImage: `url('${news.image}')`,
+                    }}
+                  />
+                  
+                  {/* 标题横幅 - 覆盖在图片底部 */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gray-900/80 backdrop-blur-sm p-4">
+                    <h3 className="text-white font-semibold text-base md:text-lg leading-tight">
+                      {news.title}
+                    </h3>
+                    <p className="text-gray-300 text-xs mt-1">{news.source}</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
