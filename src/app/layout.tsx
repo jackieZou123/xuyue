@@ -111,6 +111,8 @@ export default function RootLayout({
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        role="document"
+        aria-label="旭越家族辦公室"
       >
         {children}
       </body>

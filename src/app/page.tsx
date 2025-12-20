@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main role="main" aria-label="主要內容">
+      <main role="main" aria-label="旭越家族辦公室">
         <HeroSection />
         <AboutSection />
         <ServicesSection />
