@@ -1,0 +1,22 @@
+# robots.txt for GRAND MOON 旭越家族辦公室
+# https://www.grandmoon.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# 禁止爬取管理后台（如果有）
+# Disallow: /admin/
+
+# Sitemap位置
+Sitemap: https://www.grandmoon.com/sitemap.xml
+
+# 常见爬虫优化
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# 爬取延迟（可选，单位为秒）
+# Crawl-delay: 1
+

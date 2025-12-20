@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="w-full text-white" style={{ backgroundColor: '#3a2818' }}>
+    <footer className="w-full text-white" style={{ backgroundColor: '#3a2818' }} role="contentinfo">
       <div className="max-w-[1200px] mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* 公司信息 */}

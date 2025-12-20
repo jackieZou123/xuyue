@@ -1,0 +1,17 @@
+{
+  "name": "GRAND MOON 旭越家族辦公室",
+  "short_name": "旭越家族辦公室",
+  "description": "為卓越家族提供全方位的財富傳承與事務管理服務",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#92400e",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
+
