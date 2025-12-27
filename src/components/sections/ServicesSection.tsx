@@ -22,17 +22,28 @@ export default function ServicesSection() {
         <section id="services" className="w-full py-20 bg-white">
             <div className="max-w-[1200px] mx-auto px-4">
                 <div className="flex items-center justify-center mb-8 gap-4">
-                    <div className="w-[100px] h-px bg-gray-300"></div>
-                    <h3 className="text-4xl md:text-5xl font-bold text-gray-900 whitespace-nowrap">
+                    <div className="w-[100px] h-px bg-amber-800"></div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-amber-800 whitespace-nowrap">
                         我們的使命
                     </h3>
-                    <div className="w-[100px] h-px bg-gray-300"></div>
+                    <div className="w-[100px] h-px bg-amber-800"></div>
                 </div>   
                 {/* 使命部分 */}
-                <div className="text-center mb-16">
-                    <p className="text-xl md:text-2xl lg:text-3xl font-bold text-amber-800 leading-relaxed max-w-4xl mx-auto">
-                        以跨時代思維，協助家族實現長期財務穩定與家族和諧，在財富穩健增長的同時，傳承家族價值觀與傳統，建構跨代際的永續發展基石。
-                    </p>
+                <div className="mb-16">
+                    {/* 主标题 */}
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-amber-800 text-center mb-8 leading-tight">
+                        以極致專業為卓越家族賦能
+                    </h2>
+                    
+                    {/* 描述段落 - 左对齐 */}
+                    <div className="max-w-4xl mx-auto space-y-4 text-left">
+                        <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                            GRAND MOON 旭越家族辦公室（Global Family Office, GFO）堅持以極致專業為卓越家族賦能，力求幫助其家族、企業乃至其家族辦公室解決全生命周期面臨的諸多挑戰。
+                        </p>
+                        <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                            為其提供全面化、定制化、機構化的服務。
+                        </p>
+                    </div>
                 </div>
 
                 {/* 核心價值觀部分 */}
