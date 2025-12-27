@@ -3,22 +3,22 @@ export default function ContactSection() {
     {
       title: "傳承信託服務",
       description: "通過深入分析市場趨勢和客戶需求，我們制定個性化的投資策略，涵蓋股票、債券、房地產和另類投資。專業團隊將持續監測和調整投資組合，確保資產的增值和風險的有效控制。",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
+      image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80",
     },
     {
       title: "傳統中西教育",
       description: "旨在為家族的子女提供全球化的學習體驗。通過與國際知名學校的合作，提供多元化的課程選擇和文化交流機會。從學術指導到文化活動，全方位支持學生的成長，培養全球視野和人際交往能力。",
-      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80",
+      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80",
     },
     {
       title: "傳媒融資平台",
       description: "連接香港與內地，致力於推動文化產業的創新與投資。作為中西文化交匯的最佳聚合點，香港為中國文化IP的出海提供獨特機遇。通過整合兩地的優勢，幫助創作者獲取資金與市場，推動中國文化在全球的傳播與發展，成為促進文化繁榮的重要橋樑。",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80",
+      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&q=80",
     },
     {
       title: "傳播醫療科技",
       description: "為家族成員提供高端健康管理方案。與全球頂尖醫療機構合作，為客戶提供專業的健康檢查、專科診療和康復服務。醫療團隊將根據每位成員的健康需求，制定個性化的健康計劃。",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80",
+      image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=600&q=80",
     },
   ];
 

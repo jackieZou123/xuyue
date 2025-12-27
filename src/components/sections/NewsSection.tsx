@@ -2,21 +2,21 @@ export default function NewsSection() {
   const newsItems = [
     {
       title: "旭越家族辦公室正式啟航",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80",
+      image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&q=80",
       link: "#",
       source: "站内报道",
     },
     {
-      title: "借鉴美国税务，探讨中国的遗赠税",
-      image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80",
-      link: "#",
-      source: "媒体报道",
+      title: "《信者》制片人于越：在感性与理性间打磨好故事",
+      image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&q=80",
+      link: "https://news.sina.com.cn/sx/2025-09-30/detail-infsecqm3301362.shtml",
+      source: "新浪新闻",
     },
     {
-      title: '多地"争抢"家族办公室',
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
-      link: "#",
-      source: "公众号",
+      title: "在价值回归中寻找影视创作新坐标——从制片人于越的实践看行业转型",
+      image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&q=80",
+      link: "https://news.bjd.com.cn/2025/11/14/11406451.shtml",
+      source: "北京日报",
     },
   ];
 
@@ -57,12 +57,12 @@ export default function NewsSection() {
                     }}
                   />
                   
-                  {/* 标题横幅 - 覆盖在图片底部 */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gray-900/80 backdrop-blur-sm p-4">
-                    <h3 className="text-white font-semibold text-base md:text-lg leading-tight">
+                  {/* 标题横幅 - 覆盖在图片底部，固定高度 */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gray-900/50 backdrop-blur-sm p-4 min-h-[100px] flex flex-col justify-end">
+                    <h3 className="text-white font-semibold text-base md:text-lg leading-tight mb-2">
                       {news.title}
                     </h3>
-                    <p className="text-gray-300 text-xs mt-1">{news.source}</p>
+                    <p className="text-gray-200 text-xs">{news.source}</p>
                   </div>
                 </div>
               </div>
