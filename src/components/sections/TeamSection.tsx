@@ -91,7 +91,7 @@ export default function TeamSection() {
             <ul className="space-y-1.5 md:space-y-2">
               {section.items.map((item, i) => (
                 <li key={i} className="text-gray-700 text-xs md:text-sm flex items-start leading-relaxed">
-                  <span className="text-amber-800 mr-2 shrink-0">●</span>
+                  <span className="text-[#C5A059] mr-2 shrink-0">●</span>
                   <span className="flex-1">{item}</span>
                 </li>
               ))}
@@ -157,7 +157,7 @@ export default function TeamSection() {
                   </div>
 
                   {/* 展开指示 - 仅桌面端显示 */}
-                  <div className="hidden md:flex items-center justify-between text-amber-800 mt-auto">
+                  <div className="hidden md:flex items-center justify-between text-[#C5A059] mt-auto">
                     <span className="text-sm font-medium">
                       {expandedIndex === index ? '收起' : '查看詳情'}
                     </span>

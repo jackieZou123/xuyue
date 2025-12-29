@@ -25,7 +25,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className="w-full bg-white">
       {/* 顶部深色Header区域 */}
-      <div className="bg-amber-900 text-white py-16 md:py-20">
+      <div className="bg-[#C5A059] text-white py-16 md:py-20">
         <div className="max-w-[1200px] mx-auto px-4 text-center">
           <p className="text-sm md:text-base mb-4 opacity-90">我們的服務</p>
           <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
@@ -74,7 +74,7 @@ export default function ContactSection() {
 
               {/* 内容区域 */}
               <div className="p-6">
-                <h3 className="text-xl md:text-2xl font-bold mb-4 text-amber-800">
+                <h3 className="text-xl md:text-2xl font-bold mb-4 text-[#C5A059]">
                   {service.title}
                 </h3>
                 <p className="text-gray-700 text-sm md:text-base leading-relaxed">

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,16 +37,17 @@ export default function Header() {
             <a 
               href="#home" 
               onClick={(e) => handleNavClick(e, '#home')} 
-              className="flex items-center gap-2 group"
+              className="flex items-center group"
               aria-label="返回首頁 - GRAND MOON 旭越家族辦公室"
             >
-              <div className="relative">
-                <div className="text-xl md:text-2xl font-bold text-amber-800 group-hover:text-amber-900 transition-colors">
-                  GRAND MOON
-                </div>
-                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-800 group-hover:w-full transition-all duration-300" aria-hidden="true"></div>
-              </div>
-              <span className="hidden md:block text-xs text-gray-500 font-light">旭越家族辦公室</span>
+              <Image
+                src="/logo.png"
+                alt="GRAND MOON 旭越家族辦公室"
+                width={200}
+                height={60}
+                className="h-12 md:h-16 w-auto object-contain"
+                priority
+              />
             </a>
 
             {/* 桌面端导航 */}
@@ -55,11 +57,11 @@ export default function Header() {
                   <a
                     href={item.href}
                     onClick={(e) => handleNavClick(e, item.href)}
-                    className="text-sm xl:text-base text-gray-700 hover:text-amber-800 transition-colors whitespace-nowrap relative group"
+                    className="text-sm xl:text-base text-gray-700 hover:text-[#C5A059] transition-colors whitespace-nowrap relative group"
                     aria-label={`導航至 ${item.label}`}
                   >
                     {item.label}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-800 group-hover:w-full transition-all duration-300" aria-hidden="true"></span>
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#C5A059] group-hover:w-full transition-all duration-300" aria-hidden="true"></span>
                   </a>
                 </li>
               ))}
@@ -67,7 +69,7 @@ export default function Header() {
 
             {/* 移动端菜单按钮 */}
             <button
-              className="lg:hidden text-gray-700 hover:text-amber-800 transition-colors p-2"
+              className="lg:hidden text-gray-700 hover:text-[#C5A059] transition-colors p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? "關閉選單" : "打開選單"}
               aria-expanded={isMenuOpen}
@@ -118,7 +120,13 @@ export default function Header() {
             <div className="flex flex-col h-full">
               {/* 侧边栏头部 */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200">
-                <div className="text-xl font-bold text-amber-800">GRAND MOON</div>
+                <Image
+                  src="/logo.png"
+                  alt="GRAND MOON 旭越家族辦公室"
+                  width={150}
+                  height={45}
+                  className="h-10 w-auto object-contain"
+                />
                 <button
                   onClick={() => setIsMenuOpen(false)}
                   className="text-gray-500 hover:text-gray-700 transition-colors p-2"
@@ -148,7 +156,7 @@ export default function Header() {
                       <a
                         href={item.href}
                         onClick={(e) => handleNavClick(e, item.href)}
-                        className="block px-6 py-3 text-gray-700 hover:bg-amber-50 hover:text-amber-800 transition-colors border-l-4 border-transparent hover:border-amber-800"
+                        className="block px-6 py-3 text-gray-700 hover:bg-amber-50 hover:text-[#C5A059] transition-colors border-l-4 border-transparent hover:border-[#D1B995]"
                         aria-label={`導航至 ${item.label}`}
                       >
                         {item.label}

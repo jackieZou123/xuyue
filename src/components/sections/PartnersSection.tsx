@@ -33,10 +33,10 @@ export default function PartnersSection() {
       <div className="relative z-10 max-w-[1200px] mx-auto px-4">
         {/* 标题 */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-amber-800 mb-3">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#C5A059] mb-3">
             STRATEGIC PARTNER
           </h2>
-          <p className="text-lg md:text-xl lg:text-2xl text-amber-800">
+          <p className="text-lg md:text-xl lg:text-2xl text-[#C5A059]">
             &gt;戰略合作伙伴&gt;
           </p>
         </div>

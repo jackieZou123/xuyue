@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function ProjectsSection() {
   const projects = [
     {
@@ -38,15 +40,14 @@ export default function ProjectsSection() {
             <div className="w-[100px] h-px bg-gray-300"></div>
           </div>
         </div>
-        
+
         {/* 项目列表 */}
         <div className="space-y-12 md:space-y-16">
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`flex flex-col ${
-                index % 2 === 0 ? "md:flex flex-row" : "md:flex-row-reverse"
-              } gap-6 md:gap-8 opacity-0 animate-fade-in-up`}
+              className={`flex flex-col ${index % 2 === 0 ? "md:flex flex-row" : "md:flex-row-reverse"
+                } gap-6 md:gap-8 opacity-0 animate-fade-in-up`}
               style={{
                 animationDelay: `${index * 150}ms`,
                 animationFillMode: 'forwards',
@@ -55,7 +56,10 @@ export default function ProjectsSection() {
               {/* 图片区域 */}
               <div className="w-full md:w-1/2 group">
                 <div
-                  className="w-full h-[250px] md:h-[300px] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02] overflow-hidden"
+                  className={`w-full ${project.title === "傳承信託"
+                      ? "h-[300px] md:h-[450px]"
+                      : "h-[250px] md:h-[300px]"
+                    } bg-cover bg-center bg-no-repeat rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-[1.02] overflow-hidden`}
                   style={{
                     backgroundImage: `url('${project.image}')`,
                   }}
@@ -66,13 +70,24 @@ export default function ProjectsSection() {
 
               {/* 内容区域 */}
               <div className="w-full md:w-1/2 flex flex-col justify-center">
-                <h3 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4 text-amber-800 relative inline-block group">
+                <h3 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4 text-[#C5A059] relative inline-block group">
                   <span className="relative z-10">{project.title}</span>
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-800 group-hover:w-full transition-all duration-500"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#C5A059] group-hover:w-full transition-all duration-500"></span>
                 </h3>
                 <p className="text-gray-700 leading-relaxed text-base md:text-lg mb-4">
                   {project.description}
                 </p>
+                {project.title === "傳承信託" && (
+                  <div className="mb-4">
+                    <Image
+                      src="/ccxt.png"
+                      alt="傳承信託"
+                      width={600}
+                      height={300}
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
+                )}
                 {project.projects && (
                   <div className="mt-4 md:mt-6">
                     <p className="text-sm text-gray-500 mb-2">項目案例：</p>
@@ -80,7 +95,7 @@ export default function ProjectsSection() {
                       {project.projects.map((item, itemIndex) => (
                         <span
                           key={itemIndex}
-                          className="px-3 py-1 bg-gray-100 text-gray-700 rounded-md text-sm hover:bg-amber-100 hover:text-amber-800 transition-colors duration-300 cursor-default"
+                          className="px-3 py-1 bg-gray-100 text-gray-700 rounded-md text-sm hover:bg-amber-100 hover:text-[#C5A059] transition-colors duration-300 cursor-default"
                         >
                           {item}
                         </span>

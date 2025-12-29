@@ -28,7 +28,7 @@ export default function ContactUsSection() {
                     href="https://www.grandmoon.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-amber-800 hover:text-amber-900 hover:underline"
+                    className="text-[#C5A059] hover:text-amber-900 hover:underline"
                   >
                     www.grandmoon.com
                   </a>
@@ -37,7 +37,7 @@ export default function ContactUsSection() {
                   <span className="text-gray-600 font-medium min-w-[60px]">郵箱：</span>
                   <a
                     href="mailto:admin@grandmoon.com"
-                    className="text-amber-800 hover:text-amber-900 hover:underline"
+                    className="text-[#C5A059] hover:text-amber-900 hover:underline"
                   >
                     admin@grandmoon.com
                   </a>
@@ -50,7 +50,7 @@ export default function ContactUsSection() {
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
                 品牌理念
               </h3>
-              <p className="text-xl md:text-2xl font-semibold text-amber-800 mb-6 leading-relaxed">
+              <p className="text-xl md:text-2xl font-semibold text-[#C5A059] mb-6 leading-relaxed">
                 旭日初升，越創財富傳承
               </p>
               <p className="text-gray-700 text-base md:text-lg leading-relaxed">

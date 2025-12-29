@@ -105,7 +105,7 @@ export default function WhatWeCanDoSection() {
               className="bg-white flex flex-col h-full group cursor-pointer text-center items-center"
             >
               {/* 线条图标 */}
-              <div className="mb-6 text-amber-800 flex justify-center">
+              <div className="mb-6 text-[#C5A059] flex justify-center">
                 {service.icon}
               </div>
 
