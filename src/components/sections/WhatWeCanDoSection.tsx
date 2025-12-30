@@ -25,7 +25,7 @@ export default function WhatWeCanDoSection() {
         </LineIcon>
       ),
       title: "全方位家族服務",
-      description: "尊享全方位家族辦公室構建指導，包括家族辦公室架構設計，滿足財富和家族需求。",
+      description: "財富傳承・風險隔離・代際共創",
     },
     {
       icon: (
@@ -40,7 +40,7 @@ export default function WhatWeCanDoSection() {
         </LineIcon>
       ),
       title: "傳承信託",
-      description: "股票・債券・房地產・另類投資。專業團隊將持續監測和調整投資組合，確保資產的增值和風險的有效控制。",
+      description: "個性化投資策略・股票・債券・房地產・另類投資",
     },
     {
       icon: (
@@ -54,7 +54,7 @@ export default function WhatWeCanDoSection() {
         </LineIcon>
       ),
       title: "中西教育",
-      description: "國際課程・文化交流・全球視野。通過與國際知名學校的合作，提供多元化的課程選擇和文化交流機會。",
+      description: "全球化學習體驗・國際課程・文化交流・全球視野",
     },
     {
       icon: (
@@ -69,21 +69,22 @@ export default function WhatWeCanDoSection() {
         </LineIcon>
       ),
       title: "傳媒融資",
-      description: "文化IP出海・產業創新・全球傳播。連接香港與內地，致力於推動文化產業的創新與投資。",
+      description: "香港×北京等平台・文化IP出海・產業創新・全球傳播",
     },
     {
       icon: (
         <LineIcon>
           <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full">
-            {/* 医疗/健康 */}
-            <circle cx="32" cy="24" r="8" />
-            <path d="M24 32v16h16V32M28 40h8" />
-            <path d="M20 48h24" />
+            {/* 医疗科技 - 十字架和科技元素 */}
+            <path d="M32 16v16M24 24h16" strokeLinecap="round" />
+            <circle cx="32" cy="24" r="12" />
+            <path d="M20 36h24M20 40h24M20 44h24" strokeLinecap="round" />
+            <path d="M16 48h32M18 52h28" strokeLinecap="round" />
           </svg>
         </LineIcon>
       ),
       title: "醫療科技",
-      description: "高端檢查・專科診療・個性化方案。與全球頂尖醫療機構合作，為客戶提供專業的健康管理服務。",
+      description: "頂級健康管理・高端檢查・專科診療・個性化方案",
     },
   ];
 

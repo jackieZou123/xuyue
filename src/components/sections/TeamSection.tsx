@@ -162,9 +162,8 @@ export default function TeamSection() {
                       {expandedIndex === index ? '收起' : '查看詳情'}
                     </span>
                     <svg
-                      className={`w-5 h-5 transition-transform duration-300 ${
-                        expandedIndex === index ? 'rotate-180' : ''
-                      }`}
+                      className={`w-5 h-5 transition-transform duration-300 ${expandedIndex === index ? 'rotate-180' : ''
+                        }`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
