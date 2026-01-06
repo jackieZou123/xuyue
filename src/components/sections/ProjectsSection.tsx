@@ -5,25 +5,25 @@ export default function ProjectsSection() {
     {
       title: "傳承信託",
       description: "連通香港最大的三家信託公司，管理金融資產，企業資產，非金融資産和另類資産",
-      image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80",
+      image: "xy9.webp",
       projects: null,
     },
     {
       title: "傳統中西教育",
       description: "提供全球教育規劃，培養優秀家族人才",
-      image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80",
+      image: "xy16.webp",
       projects: null,
     },
     {
       title: "傳媒融資平臺",
       description: "投資優質影視文化娛樂項目，推動產業發展",
-      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&q=80",
+      image: "xy5.webp",
       projects: ["卧虎藏龙", "信者", "不可能的任务", "哪吒之魔童降世"],
     },
     {
       title: "傳播醫療科技",
       description: "提供全球醫療合作，守護家族健康未來",
-      image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=600&q=80",
+      image: "xy14.webp",
       projects: ["康方生物", "陞罄生技", "全心醫藥生物", "蔚流生物科技"],
     },
   ];

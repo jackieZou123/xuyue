@@ -2,19 +2,19 @@ export default function AboutSection() {
     // 照片拼图数据
     const galleryImages = [
         {
-            url: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&q=80",
+            url: "xy3.webp",
             alt: "开业典礼"
         },
         {
-            url: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&q=80",
+            url: "xy2.webp",
             alt: "团队会议"
         },
         {
-            url: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80",
+            url: "xy4.webp",
             alt: "商务活动"
         },
         {
-            url: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80",
+            url: "xy13.webp",
             alt: "合作签约"
         },
     ];
@@ -29,7 +29,7 @@ export default function AboutSection() {
                         <div
                             className="absolute inset-0 bg-cover bg-center bg-no-repeat rounded-lg shadow-lg"
                             style={{
-                                backgroundImage: "url('https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1200&q=80')"
+                                backgroundImage: "url('xy10.webp')"
                             }}
                         />
                     </div>

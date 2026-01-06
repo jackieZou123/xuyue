@@ -2,19 +2,19 @@ export default function NewsSection() {
   const newsItems = [
     {
       title: "旭越家族辦公室正式啟航",
-      image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&q=80",
+      image: "new1.webp",
       link: "#",
       source: "站内报道",
     },
     {
       title: "《信者》制片人于越：在感性与理性间打磨好故事",
-      image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=600&q=80",
+      image: "new2.webp",
       link: "https://news.sina.com.cn/sx/2025-09-30/detail-infsecqm3301362.shtml",
       source: "新浪新闻",
     },
     {
       title: "在价值回归中寻找影视创作新坐标——从制片人于越的实践看行业转型",
-      image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&q=80",
+      image: "new3.webp",
       link: "https://news.bjd.com.cn/2025/11/14/11406451.shtml",
       source: "北京日报",
     },
