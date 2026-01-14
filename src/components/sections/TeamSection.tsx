@@ -9,7 +9,7 @@ export default function TeamSection() {
     {
       name: "萬軍",
       title: "影視文化產業專家 | 資深製片人 | 電影投資顧問",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+      image: "wj.png",
       coreAreas: [
         "電影項目開發與製作管理",
         "影視項目投資與風險控制",
@@ -29,7 +29,7 @@ export default function TeamSection() {
     {
       name: "三明道长",
       title: "道家文化傳承人 | 風水命理專家 | 家族傳承顧問",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+      image: "sm.png",
       coreAreas: [
         "傳統風水與現代環境規劃",
         "易學智慧與企業決策諮詢",
@@ -48,7 +48,7 @@ export default function TeamSection() {
     {
       name: "于越 Phoebe Yu",
       title: "旭越家族辦公室創辦人 | 影視製片人 | 出品人 | 投資人",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80",
+      image: "PhoebeYU.png",
       coreAreas: [
         "家族財富傳承與資產配置",
         "影視文化項目投資製作",

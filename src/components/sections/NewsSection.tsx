@@ -1,9 +1,9 @@
 export default function NewsSection() {
   const newsItems = [
     {
-      title: "旭越家族辦公室正式啟航",
+      title: "香港誕生「金融+影視文化」雙軌服務體：GRAND MOON FAMILY OFFICE與KONG BROS STUDIO雙雙啓航",
       image: "new1.webp",
-      link: "#",
+      link: "/news/grand-moon-launch",
       source: "站内报道",
     },
     {
@@ -43,8 +43,8 @@ export default function NewsSection() {
             <a
               key={index}
               href={news.link}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={news.link.startsWith('http') ? '_blank' : '_self'}
+              rel={news.link.startsWith('http') ? 'noopener noreferrer' : undefined}
               className="group block"
             >
               <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
@@ -59,7 +59,7 @@ export default function NewsSection() {
                   
                   {/* 标题横幅 - 覆盖在图片底部，固定高度 */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gray-900/50 backdrop-blur-sm p-4 min-h-[100px] flex flex-col justify-end">
-                    <h3 className="text-white font-semibold text-base md:text-lg leading-tight mb-2">
+                    <h3 className="text-white font-semibold text-base md:text-lg leading-tight mb-2 line-clamp-2">
                       {news.title}
                     </h3>
                     <p className="text-gray-200 text-xs">{news.source}</p>
