@@ -2,7 +2,7 @@ export default function NewsSection() {
   const newsItems = [
     {
       title: "香港誕生「金融+影視文化」雙軌服務體：GRAND MOON FAMILY OFFICE與KONG BROS STUDIO雙雙啓航",
-      image: "new1.webp",
+      image: "news/IMG_0232.jpg",
       link: "/news/grand-moon-launch",
       source: "站内报道",
     },
@@ -32,9 +32,9 @@ export default function NewsSection() {
             </h2>
             <div className="w-[100px] h-px bg-gray-300"></div>
           </div>
-          <p className="text-sm text-gray-500 mt-2">
+          {/* <p className="text-sm text-gray-500 mt-2">
             外接新聞報道 + 站內報道，整理事件進行發布
-          </p>
+          </p> */}
         </div>
         
         {/* 新闻卡片网格 */}

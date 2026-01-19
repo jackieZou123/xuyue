@@ -118,9 +118,9 @@ export default function TeamSection() {
 
         {/* 介绍段落 */}
         <div className="text-center mb-10 md:mb-16 max-w-4xl mx-auto">
-          <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+          {/* <p className="text-gray-700 leading-relaxed text-base md:text-lg">
             我們的專業團隊來自於國內外知名院校，曾任職於包括美世集團、上海證券、諾亞財富、安聯集團、博時資本、華寶證券、國泰基金等國內外大型金融機構，具備豐富的基金研究投資經驗，擁有跨地域的視野與眼光。
-          </p>
+          </p> */}
         </div>
 
         {/* 团队成员卡片 */}
